@@ -18,50 +18,35 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\Godot Game 01\src\world\player.cpp" />
-    <ClCompile Include="src\world\mob.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\Godot Game 01\include\world\player.hpp" />
-    <ClInclude Include="..\Godot Game 01\include\world\player.ipp" />
-    <ClInclude Include="..\Godot Game 01\include\world\world.hpp" />
-    <ClInclude Include="include\world\mob.hpp" />
-    <ClInclude Include="include\world\mob.ipp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="scripts\world\mob.gdns" />
-    <None Include="scripts\world\player.gdns" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8efdcb9a-a0c4-4e90-808b-0570155d6669}</ProjectGuid>
-    <RootNamespace>world</RootNamespace>
+    <ProjectGuid>{abec89dc-cc7c-45c0-b754-32f1bedbe04f}</ProjectGuid>
+    <RootNamespace>dev</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Utility</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -87,75 +72,39 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)lib\</OutDir>
-    <IntDir>obj\$(TargetName)\</IntDir>
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)lib\</OutDir>
-    <IntDir>obj\$(TargetName)\</IntDir>
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)lib\</OutDir>
-    <IntDir>obj\$(TargetName)\</IntDir>
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)lib\</OutDir>
-    <IntDir>obj\$(TargetName)\</IntDir>
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <AssemblerListingLocation>obj\$(TargetName)\</AssemblerListingLocation>
-      <ModuleOutputFile>obj\$(TargetName)\</ModuleOutputFile>
-      <ModuleDependenciesFile>obj\$(TargetName)\</ModuleDependenciesFile>
-      <ObjectFileName>obj\$(TargetName)\</ObjectFileName>
-      <XMLDocumentationFileName>obj\$(TargetName)\</XMLDocumentationFileName>
-      <SourceDependenciesFile>obj\$(TargetName)\</SourceDependenciesFile>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <AssemblerListingLocation>obj\$(TargetName)\</AssemblerListingLocation>
-      <ModuleOutputFile>obj\$(TargetName)\</ModuleOutputFile>
-      <ModuleDependenciesFile>obj\$(TargetName)\</ModuleDependenciesFile>
-      <ObjectFileName>obj\$(TargetName)\</ObjectFileName>
-      <XMLDocumentationFileName>obj\$(TargetName)\</XMLDocumentationFileName>
-      <SourceDependenciesFile>obj\$(TargetName)\</SourceDependenciesFile>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -163,52 +112,60 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <AssemblerListingLocation>obj\$(TargetName)\</AssemblerListingLocation>
-      <ModuleOutputFile>obj\$(TargetName)\</ModuleOutputFile>
-      <ModuleDependenciesFile>obj\$(TargetName)\</ModuleDependenciesFile>
-      <ObjectFileName>obj\$(TargetName)\</ObjectFileName>
-      <XMLDocumentationFileName>obj\$(TargetName)\</XMLDocumentationFileName>
-      <SourceDependenciesFile>obj\$(TargetName)\</SourceDependenciesFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <AssemblerListingLocation>obj\$(TargetName)\</AssemblerListingLocation>
-      <ModuleOutputFile>obj\$(TargetName)\</ModuleOutputFile>
-      <ModuleDependenciesFile>obj\$(TargetName)\</ModuleDependenciesFile>
-      <ObjectFileName>obj\$(TargetName)\</ObjectFileName>
-      <XMLDocumentationFileName>obj\$(TargetName)\</XMLDocumentationFileName>
-      <SourceDependenciesFile>obj\$(TargetName)\</SourceDependenciesFile>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\game_controller.hpp" />
+    <ClInclude Include="include\game_controller.ipp" />
+    <ClInclude Include="include\ui\hud.hpp" />
+    <ClInclude Include="include\ui\hud.ipp" />
+    <ClInclude Include="include\ui\ui.hpp" />
+    <ClInclude Include="include\world\mob.hpp" />
+    <ClInclude Include="include\world\mob.ipp" />
+    <ClInclude Include="include\world\player.hpp" />
+    <ClInclude Include="include\world\player.ipp" />
+    <ClInclude Include="include\world\world.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\game_controller.gdns" />
+    <None Include="scripts\main.gdnlib" />
+    <None Include="scripts\script template.gdns" />
+    <None Include="scripts\ui\hud.gdns" />
+    <None Include="scripts\world\mob.gdns" />
+    <None Include="scripts\world\player.gdns" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\game_controller.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ui\hud.cpp" />
+    <ClCompile Include="src\world\mob.cpp" />
+    <ClCompile Include="src\world\player.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

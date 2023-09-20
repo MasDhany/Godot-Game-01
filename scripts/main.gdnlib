@@ -7,10 +7,20 @@ reloadable=true
 
 [entry]
 
-Windows.32="res://bin/Windows.32.dll"
-Windows.64="res://bin/Windows.64.dll"
+Android.armeabi-v7a = "res://lib/libandroid-arm.so"
+Android.arm64-v8a = "res://lib/libandroid-arm64.so"
+Android.x86 = "res://lib/libandroid-x86.so"
+Android.x86_64 = "res://lib/libandroid-x64.so"
+
+Windows.32 = "res://lib/libwindows-32.dll"
+Windows.64 = "res://lib/libwindows-64.dll"
 
 [dependencies]
 
-Windows.32=[  ]
-Windows.64=[  ]
+Android.armeabi-v7a = []
+Android.arm64-v8a = []
+Android.x86 = []
+Android.x86_64 = []
+
+Windows.32 = []
+Windows.64 = []

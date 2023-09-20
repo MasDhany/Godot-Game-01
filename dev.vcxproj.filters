@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{510f32dd-6cb2-433a-8147-86963cee40b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{83b69faf-86e5-452b-82d7-a50879f0223a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\world">
+      <UniqueIdentifier>{390a77fc-2603-4528-8d83-042656aa1d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{08317b8f-7ff6-45a3-bd57-4b4a9e878461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Files">
+      <UniqueIdentifier>{cbb2aabf-ef65-40c3-9b69-96da3f543774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\world">
+      <UniqueIdentifier>{b7773c95-af23-4546-aea6-ccf6f3cccc2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\ui">
+      <UniqueIdentifier>{63285c65-e01e-4e9f-a8a5-35b47d8a1bb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Files\world">
+      <UniqueIdentifier>{82746b4c-a206-4f54-8545-d7993c665b71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Files\ui">
+      <UniqueIdentifier>{4544651a-c804-4ba0-9495-761997ec8e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{988385e2-00c6-4deb-a927-d4da8d9b0d47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\world">
+      <UniqueIdentifier>{40087979-8431-480d-b0d1-23510f91278d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\game_controller.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\ui.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\hud.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\hud.ipp">
+      <Filter>Inline Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\world\world.hpp">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="include\world\mob.hpp">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="include\world\player.hpp">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="include\world\mob.ipp">
+      <Filter>Inline Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="include\world\player.ipp">
+      <Filter>Inline Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game_controller.ipp">
+      <Filter>Inline Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\main.gdnlib">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="scripts\script template.gdns">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="scripts\game_controller.gdns">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="scripts\ui\hud.gdns">
+      <Filter>Script Files\ui</Filter>
+    </None>
+    <None Include="scripts\world\player.gdns">
+      <Filter>Script Files\world</Filter>
+    </None>
+    <None Include="scripts\world\mob.gdns">
+      <Filter>Script Files\world</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\game_controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\hud.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\player.cpp">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\mob.cpp">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
