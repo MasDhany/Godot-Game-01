@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://resources/tscn/mob.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/game_controller.gdns" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://scripts/ui/hud.gdns" type="Script" id=5]
 [ext_resource path="res://resources/audio/House In a Forest Loop.ogg" type="AudioStream" id=6]
 [ext_resource path="res://resources/audio/gameover.wav" type="AudioStream" id=7]
+[ext_resource path="res://resources/sprites/button.png" type="Texture" id=8]
+[ext_resource path="res://scripts/ui/movement_button.gdns" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=2]
 size = 64
@@ -36,6 +38,67 @@ margin_bottom = 40.0
 
 [node name="hud" type="CanvasLayer" parent="ui"]
 script = ExtResource( 5 )
+
+[node name="movement_button" type="Control" parent="ui/hud"]
+modulate = Color( 1, 1, 1, 0.490196 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -212.0
+script = ExtResource( 9 )
+
+[node name="up" type="Button" parent="ui/hud/movement_button"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 106.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( 48, 48 )
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+
+[node name="down" type="Button" parent="ui/hud/movement_button"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -106.0
+margin_right = 106.0
+margin_bottom = -10.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 48, 48 )
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+
+[node name="right" type="Button" parent="ui/hud/movement_button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -106.0
+margin_top = -48.0
+margin_right = -10.0
+margin_bottom = 48.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 48, 48 )
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+
+[node name="left" type="Button" parent="ui/hud/movement_button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -212.0
+margin_top = -48.0
+margin_right = -116.0
+margin_bottom = 48.0
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 48, 48 )
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
 
 [node name="score" type="Label" parent="ui/hud"]
 anchor_right = 1.0
@@ -110,11 +173,21 @@ volume_db = -10.0
 [node name="death_sound" type="AudioStreamPlayer" parent="game_controller"]
 stream = ExtResource( 7 )
 
+[connection signal="start_button_pressed" from="ui/hud" to="ui/hud/movement_button" method="new_game"]
 [connection signal="start_button_pressed" from="ui/hud" to="game_controller" method="new_game"]
+[connection signal="button_down" from="ui/hud/movement_button/up" to="ui/hud/movement_button" method="_on_up_button_down"]
+[connection signal="button_up" from="ui/hud/movement_button/up" to="ui/hud/movement_button" method="_on_up_button_up"]
+[connection signal="button_down" from="ui/hud/movement_button/down" to="ui/hud/movement_button" method="_on_down_button_down"]
+[connection signal="button_up" from="ui/hud/movement_button/down" to="ui/hud/movement_button" method="_on_down_button_up"]
+[connection signal="button_down" from="ui/hud/movement_button/right" to="ui/hud/movement_button" method="_on_right_button_down"]
+[connection signal="button_up" from="ui/hud/movement_button/right" to="ui/hud/movement_button" method="_on_right_button_up"]
+[connection signal="button_down" from="ui/hud/movement_button/left" to="ui/hud/movement_button" method="_on_left_button_down"]
+[connection signal="button_up" from="ui/hud/movement_button/left" to="ui/hud/movement_button" method="_on_left_button_up"]
 [connection signal="pressed" from="ui/hud/start_button" to="ui/hud" method="_on_start_button_pressed"]
 [connection signal="timeout" from="ui/hud/start_message_timer" to="ui/hud" method="_on_start_message_timer_timeout"]
 [connection signal="timeout" from="ui/hud/get_ready_message_timer" to="ui/hud" method="_on_get_ready_message_timer_timeout"]
 [connection signal="timeout" from="ui/hud/start_button_timer" to="ui/hud" method="_on_start_button_timer_timeout"]
+[connection signal="hit" from="world/player" to="ui/hud/movement_button" method="game_over"]
 [connection signal="hit" from="world/player" to="game_controller" method="game_over"]
 [connection signal="timeout" from="game_controller/mob_timer" to="game_controller" method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="game_controller/score_timer" to="game_controller" method="_on_score_timer_timeout"]

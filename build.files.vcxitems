@@ -3,6 +3,7 @@
   <PropertyGroup Label="Globals">
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{4A2DA5A6-5ECC-4DAD-8932-544535DEF7AE}</ItemsProjectGuid>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -16,6 +17,7 @@
     <ClCompile Include="src\game_controller.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ui\hud.cpp" />
+    <ClCompile Include="src\ui\movement_button.cpp" />
     <ClCompile Include="src\world\mob.cpp" />
     <ClCompile Include="src\world\player.cpp" />
   </ItemGroup>

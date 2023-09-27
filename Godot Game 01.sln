@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "platform", "platform", "{6B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "property", "property", "{D46D4C92-D0A6-4C9E-A3A2-C027966E541F}"
 	ProjectSection(SolutionItems) = preProject
+		property.android.props = property.android.props
 		property.general.props = property.general.props
+		property.windows.props = property.windows.props
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "build.android", "build.android.vcxproj", "{B863BA1D-D867-405C-B3B5-309221108F64}"

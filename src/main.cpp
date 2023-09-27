@@ -5,6 +5,7 @@
 
 // Internal Dependencies
 #include <ui/hud.hpp>
+#include <ui/movement_button.hpp>
 
 #include <world/mob.hpp>
 #include <world/player.hpp>
@@ -21,6 +22,7 @@ extern "C" {
 		gd::godot::nativescript_init(handle);
 
 		gd::register_class<ui::hud>();
+		gd::register_class<ui::movement_button>();
 
 		gd::register_class<world::mob>();
 		gd::register_class<world::player>();

@@ -17,6 +17,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\game_controller.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\main.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\ui\hud.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\ui\movement_button.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\world\mob.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\world\player.cpp" />
   </ItemGroup>
@@ -25,6 +26,7 @@
     <None Include="$(MSBuildThisFileDirectory)scripts\main.gdnlib" />
     <None Include="$(MSBuildThisFileDirectory)scripts\script template.gdns" />
     <None Include="$(MSBuildThisFileDirectory)scripts\ui\hud.gdns" />
+    <None Include="$(MSBuildThisFileDirectory)scripts\ui\movement_button.gdns" />
     <None Include="$(MSBuildThisFileDirectory)scripts\world\mob.gdns" />
     <None Include="$(MSBuildThisFileDirectory)scripts\world\player.gdns" />
   </ItemGroup>
@@ -33,6 +35,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)include\game_controller.ipp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\hud.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\hud.ipp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\movement_button.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\movement_button.ipp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\ui.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\world\mob.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)include\world\mob.ipp" />

@@ -54,6 +54,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)src\world\mob.cpp">
       <Filter>Source Files\world</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\ui\movement_button.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)scripts\game_controller.gdns">
@@ -73,6 +76,9 @@
     </None>
     <None Include="$(MSBuildThisFileDirectory)scripts\world\mob.gdns">
       <Filter>Script Files\world</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\ui\movement_button.gdns">
+      <Filter>Script Files\ui</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +111,12 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)include\world\player.ipp">
       <Filter>Inline Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\movement_button.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\movement_button.ipp">
+      <Filter>Inline Files\ui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
