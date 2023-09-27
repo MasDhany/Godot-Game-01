@@ -34,13 +34,6 @@
       <Platform>x86</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\game_controller.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\ui\hud.cpp" />
-    <ClCompile Include="src\world\mob.cpp" />
-    <ClCompile Include="src\world\player.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{b863ba1d-d867-405c-b3b5-309221108f64}</ProjectGuid>
     <Keyword>Android</Keyword>
@@ -48,6 +41,7 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <ApplicationType>Android</ApplicationType>
     <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
+    <ProjectName>build.android</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
@@ -92,71 +86,80 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
-  <ImportGroup Label="Shared" />
-  <ImportGroup Label="PropertySheets" />
+  <ImportGroup Label="Shared">
+    <Import Project="build.files.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <Import Project="property.general.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-x64</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-debug-x64\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-x64</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-release-x64\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-x86</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-debug-x86\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-x86</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-release-x86\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-arm64</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-debug-arm64\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-arm64</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-release-arm64\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-arm</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-debug-arm\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <IncludePath>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)lib;$(SolutionDir)..\Godot CPP Library\bin\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>libandroid-arm</TargetName>
-    <IntDir>obj\$(Configuration)-$(Platform)\</IntDir>
+    <IntDir>obj\libandroid-release-arm\</IntDir>
     <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -167,12 +170,22 @@
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)..\Godot CPP Library\include\godot-headers;$(SolutionDir)..\Godot CPP Library\include\gen;$(SolutionDir)..\Godot CPP Library\include\core;$(SolutionDir)..\Godot CPP Library\include\;$(IncludePath)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-debug-x64.a</AdditionalDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -181,12 +194,22 @@
       </PrecompiledHeaderFile>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-release-x64.a</AdditionalDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
@@ -195,12 +218,22 @@
       </PrecompiledHeaderFile>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-debug-x86.a</AdditionalDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
@@ -209,12 +242,22 @@
       </PrecompiledHeaderFile>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-release-x86.a</AdditionalDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
@@ -223,7 +266,8 @@
       </PrecompiledHeaderFile>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <CLanguageStandard>Default</CLanguageStandard>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-debug-arm64.a</AdditionalDependencies>
@@ -232,6 +276,14 @@
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -240,12 +292,22 @@
       </PrecompiledHeaderFile>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-release-arm64.a</AdditionalDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -254,12 +316,22 @@
       </PrecompiledHeaderFile>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-debug-arm.a</AdditionalDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -268,12 +340,22 @@
       </PrecompiledHeaderFile>
       <CppLanguageStandard>c++1z</CppLanguageStandard>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>ANDROID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(SolutionDir)..\Godot CPP Library\bin\libandroid-release-arm.a</AdditionalDependencies>
       <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
       <LibraryDependencies>%(LibraryDependencies)</LibraryDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>call etc/update_output.bat .so
+call etc/create_build_files.bat
+call etc/message.bat</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call etc/message.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

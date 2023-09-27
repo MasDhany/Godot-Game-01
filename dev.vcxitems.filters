@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b70746fa-cd5c-4135-a8ec-a0afb943721d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{a345808d-5b72-436c-85a4-2263ff320498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Files">
+      <UniqueIdentifier>{5440ddc6-900f-4491-b42d-657365674d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{dfe0efef-89d7-44e3-8558-60a71fea39be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{6b114473-47c8-4116-b204-cf9260622638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\world">
+      <UniqueIdentifier>{dba37d72-6e56-4ade-9605-58b28bc6258f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Files\ui">
+      <UniqueIdentifier>{4c1c2698-f74b-4132-8d45-cea55e298b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Files\world">
+      <UniqueIdentifier>{bf2d446d-d462-48a7-b154-0d871fb4ba94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{5213cab8-e2f9-4a5a-8ede-227ca063d32a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\ui">
+      <UniqueIdentifier>{4ade7053-628f-46dd-9cae-3b3a78dbee5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\world">
+      <UniqueIdentifier>{300fe7a2-5ff3-4bf2-96be-2a35055f5478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\world">
+      <UniqueIdentifier>{8d15809b-9990-41d2-8ef9-f16fdbef5419}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\game_controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\ui\hud.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\world\player.cpp">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\world\mob.cpp">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)scripts\game_controller.gdns">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\main.gdnlib">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\script template.gdns">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\ui\hud.gdns">
+      <Filter>Script Files\ui</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\world\player.gdns">
+      <Filter>Script Files\world</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)scripts\world\mob.gdns">
+      <Filter>Script Files\world</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\game_controller.ipp">
+      <Filter>Inline Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\game_controller.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\ui.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\hud.hpp">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\ui\hud.ipp">
+      <Filter>Inline Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\world\world.hpp">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\world\mob.hpp">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\world\player.hpp">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\world\mob.ipp">
+      <Filter>Inline Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\world\player.ipp">
+      <Filter>Inline Files\world</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

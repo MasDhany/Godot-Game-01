@@ -1,0 +1,20 @@
+[build]
+├╴build.android
+│	└╴Used for building to android
+├╴build.windows
+│	└╴Used for building to windows
+└╴build.files
+	└╴List of source files to build
+
+[platform]
+├╴platform.android
+│	└╴Used to develop for android
+└╴platform.windows
+	└╴Used to develop for windows
+
+[property]
+└╴property.general.props
+	└╴General project properties
+
+[dev]
+└╴Used for development
