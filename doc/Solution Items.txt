@@ -13,8 +13,12 @@
 	└╴Used to develop for windows
 
 [property]
-└╴property.general.props
-	└╴General project properties
+├╴property.android.props
+│	└╴Android project properties
+├╴property.general.props
+│	└╴General project properties
+└╴property.windows.props
+	└╴Windows project properties
 
 [dev]
 └╴Used for development
